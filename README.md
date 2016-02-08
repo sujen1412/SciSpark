@@ -17,28 +17,20 @@ If any visitors have insights into achieving this, please see the issue titled
 #Installation
 
 Requirements (in-order):
-* ND4J: https://github.com/deeplearning4j/nd4j
-* ND4S: https://github.com/deeplearning4j/nd4s
-* Scala: v2.10.5+
+* Scala: v2.11.x
+* Spark compiled with Scala 2.11.x as instructed [here](http://spark.apache.org/docs/latest/building-spark.html#building-for-scala-211)
 * Maven 2.0x+
-* SBT: v0.13.5+
+* SBT: v0.13.x
 
 Steps:
 
-1. Ensure ND4J and ND4S are installed in you local Maven repository
-2. Open a terminal, and enter: `sbt clean assembly`
-3. You should see a [success] message at the bottom if the package built correctly.
+1. Open a terminal, and enter: `sbt clean assembly`
+2. You should see a [success] message at the bottom if the package built correctly.
 
 Test your installation:
 
 ```sbt "run"```
 
-Possible pitfalls:
-
-ND4S + Scala compilation issues: If problems occur, consider changing the scala version in the build.sbt file of the nd4s to scala version 2.10. Update the libraries dependenices in build.sbt in scispark accordingly. 
-* Note that the current SciSpark build includes an nd4s jar that is part of the classpath. 
-The jar is created by downloading nd4s from github and cbanging the scala version to 2.10. The jar is then copied
-under /lib in the SciSparkTestExperiments directory. 
 
 #Getting Started
 
